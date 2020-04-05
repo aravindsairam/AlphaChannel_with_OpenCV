@@ -30,15 +30,15 @@ temp = cv2.cvtColor(temp, cv2.COLOR_BGR2GRAY)
 masked = cv2.bitwise_and(image, image, mask = temp)
 
 #convert image to RGB to RGBA channel
-img = cv2.cvtColor(masked, cv2.COLOR_RGB2RGBA)
+imgA = cv2.cvtColor(masked, cv2.COLOR_RGB2RGBA)
 
-i, j, k = img.shape
+i, j, k = imgA.shape
 
 #Run through all pixels and
 #if a pixel is black make it transparent by setting alpha channel = 0
 for a in range(0, i):
     for b in range(0, j):
-        if img[a, b][0] == 0 and img[a, b][1] == 0 and img[a, b][2] == 0:
-            img[a, b][3] = 0
+        if imgA[a, b][0] == 0 and imgA[a, b][1] == 0 and imgA[a, b][2] == 0:
+            imgA[a, b][3] = 0
 
-cv2.imwrite('images/transparent.png', img)
+cv2.imwrite('images/transparent.png', imgA)
