@@ -3,7 +3,7 @@ import argparse
 import dlib
 import cv2
 
-# python Transparent.py --img image_name
+# python Transparent.py --img images/image_name
 parser = argparse.ArgumentParser(description = 'User input')
 parser.add_argument('--img', help = 'Input image name')
 args = parser.parse_args()
@@ -41,4 +41,4 @@ for a in range(0, i):
         if img[a, b][0] == 0 and img[a, b][1] == 0 and img[a, b][2] == 0:
             img[a, b][3] = 0
 
-cv2.imwrite('transparent.png', img)
+cv2.imwrite('images/transparent.png', img)
