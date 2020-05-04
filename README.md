@@ -7,4 +7,4 @@ The alpha channel controls the transparency or opacity of a color.
 
 Output:
 
-<img src="images/example.png" height="250px" width="400px">
+<img src="images/example.png" height="250px" width="500px">
